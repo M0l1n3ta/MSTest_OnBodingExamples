@@ -1,0 +1,48 @@
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+using Prueba_1.Models;
+
+namespace Prueba_1
+{
+    [TestClass]
+    [TestCategory("Calculator TestCases")]
+    public class Test_2
+    {
+
+        [TestMethod]
+        [TestCategory("Sum")]
+        public void checkSum()
+        {
+
+            Calc calculator = new Calc();
+            string resultado = calculator.Sum(10.2,10.4);
+            Assert.AreEqual("20.6", resultado);
+
+        }
+
+        [TestMethod]
+        [TestCategory("Rest")]
+        public void checkRest()
+        {
+
+            Calc calculator = new Calc();
+            string resultado = calculator.rest(20.6, 10.4);
+            Assert.AreEqual("10.2", resultado);
+
+        }
+
+        [TestMethod]
+        [TestCategory("Mult")]
+        public void checkMult()
+        {
+
+            Calc calculator = new Calc();
+            string resultado = calculator.Mult(10.2, 3);
+            Assert.AreEqual("30.6", resultado);
+
+        }
+
+
+
+    }
+}
