@@ -2,7 +2,7 @@
 using System;
 using Prueba_1.Models;
 
-namespace Prueba_1
+namespace MSTest_OnBodingExamples
 {
     [TestClass]
     [TestCategory("Calculator TestCases")]
