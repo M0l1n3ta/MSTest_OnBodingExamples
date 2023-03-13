@@ -3,7 +3,7 @@ using System;
 using OpenQA.Selenium;
 using OpenQA.Selenium.IE;
 
-namespace MSTest_OnBodingExamples
+namespace SeleniumTest
 {
     [TestClass]
     public class EdgeIEMode
