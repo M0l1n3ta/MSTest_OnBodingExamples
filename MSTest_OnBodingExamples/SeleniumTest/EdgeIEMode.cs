@@ -8,6 +8,7 @@ namespace SeleniumTest
     [TestClass]
     public class EdgeIEMode
     {
+        private WebDriver driver;
         [TestMethod]
         public void TestMethod1()
         {
@@ -18,11 +19,16 @@ namespace SeleniumTest
             ieOptions.EdgeExecutablePath = "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe";
             ieOptions.IntroduceInstabilityByIgnoringProtectedModeSettings = true;
 
-            var driver = new InternetExplorerDriver(ieOptions);
+            driver = new InternetExplorerDriver(ieOptions);
             driver.Navigate().GoToUrl("https://stagingfxonline.riaenvia.net/External/Login.aspx?ReturnUrl=%2f");
-            
-
-            driver.Quit();
+        
         }
+
+
+        [TestCleanup]
+        public void Dispose(){
+            if(driver != null)  
+                driver.Quit();
+        } 
     }
 }
