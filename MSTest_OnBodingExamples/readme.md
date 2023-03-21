@@ -24,3 +24,7 @@ dotnet add package Selenium.WebDriver.MSEdgeDriver --version 110.0.1587.50
 ## Add Benchmarking package
 
 dotnet add package BenchmarkDotNet
+
+### Runnig Benchmark test
+
+dotnet test -c Release --filter "TestCategory=BenchMark"

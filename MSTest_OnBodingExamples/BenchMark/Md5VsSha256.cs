@@ -8,9 +8,7 @@ using BenchmarkDotNet.Running;
 namespace BenchMark{
 
     [SimpleJob(RuntimeMoniker.Net472, baseline: true)]
-    [SimpleJob(RuntimeMoniker.NetCoreApp30)] 
     [SimpleJob(RuntimeMoniker.NativeAot60)]
-    [SimpleJob(RuntimeMoniker.Mono)] 
     [RPlotExporter]
     public class Md5VsSha256
     {
