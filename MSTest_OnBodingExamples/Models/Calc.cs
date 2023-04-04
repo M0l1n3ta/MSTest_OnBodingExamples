@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Prueba_1.Models
+namespace MSTest_OnBodingExamples.Models
 {
     public class Calc
     {

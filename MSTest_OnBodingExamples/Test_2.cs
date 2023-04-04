@@ -1,12 +1,12 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using Prueba_1.Models;
+using MSTest_OnBodingExamples.Models;
 
 namespace MSTest_OnBodingExamples
 {
     [TestClass]
     [TestCategory("Calculator TestCases")]
-    public class Test_2
+    public class TestSumClass
     {
 
         [TestMethod]
