@@ -33,6 +33,9 @@
     <None Update="Resources\TestData.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+        <None Update="Resources\TestNumbersData.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
