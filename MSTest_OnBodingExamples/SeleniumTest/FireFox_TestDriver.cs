@@ -3,6 +3,7 @@ using System;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using System.IO;
+using System.Threading;
 
 namespace SeleniumTest
 {
@@ -133,6 +134,40 @@ namespace SeleniumTest
             
 
             Assert.IsTrue(driver.Title.Equals("Ria - FxOnline Login"));
+        }
+
+
+
+        [TestMethod]
+        public void DownloadFileOnSpecificDirectoryAutomaticalle_Test(){
+            var options = new FirefoxOptions();
+            String path = @"C:\logs\Automated_Tests_Logs";
+            options.SetPreference("browser.download.folderList", 2);
+            //options.SetPreference("browser.download.manager.showWhenStarting",false);
+            options.SetPreference("browser.download.dir", path);
+            options.SetPreference("browser.helperApps.neverAsk.saveToDisk", "application/pdf");
+
+            FirefoxDriverService service = FirefoxDriverService.CreateDefaultService();
+            driver =  new FirefoxDriver(service,options);
+
+            driver.Navigate().GoToUrl("https://blog.riamoneytransfer.com/wp-content/uploads/2020/06/A-Case-for-Affordable-Remittances-2020-Ria-Money-Transfer.pdf");
+
+            IWebElement btnDownload = driver.FindElement(By.Id("download"));
+            btnDownload.Click();
+            Thread.Sleep(2000);
+
+        }
+
+        [TestMethod]
+        public void FirefoxDriver_test(){
+
+
+            var options = new FirefoxOptions();
+            FirefoxDriverService service = FirefoxDriverService.CreateDefaultService();
+            driver =  new FirefoxDriver(service,options);
+
+            driver.Navigate().GoToUrl("https://blog.riamoneytransfer.com/wp-content/uploads/2020/06/A-Case-for-Affordable-Remittances-2020-Ria-Money-Transfer.pdf");
+
         }
 
 

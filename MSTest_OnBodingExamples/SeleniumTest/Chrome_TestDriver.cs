@@ -9,7 +9,7 @@ namespace SeleniumTest
     public class Chrome_TestDriver
     {
 
-        private WebDriver driver;
+        private IWebDriver driver;
         [TestMethod]
         public void ChromeDriver_Test()
         {

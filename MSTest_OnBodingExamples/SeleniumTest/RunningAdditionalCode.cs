@@ -1,8 +1,10 @@
+namespace SeleniumTest;
+
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Diagnostics;
 
-namespace RunningAdditionalCode{
+
 
     [TestClass]
     public class LifeCycle{
@@ -42,4 +44,3 @@ namespace RunningAdditionalCode{
 
     }
 
-}

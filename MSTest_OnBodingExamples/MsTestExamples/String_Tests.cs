@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 
 
-namespace Prueba_1
+namespace MsTestExamples
 {
     [TestClass]
     [TestCategory("Strings")]
