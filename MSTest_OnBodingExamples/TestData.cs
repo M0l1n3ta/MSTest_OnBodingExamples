@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.IO;
 using System;
 using NPOI.XSSF.UserModel;
-using Prueba_1.Models;
+using MSTest_OnBodingExamples.Models;
 using CrossCutting.Mappers;
 using System.Xml.Linq;
-using Prueba_1.Enums;
+using MSTest_OnBodingExamples.Enums;
 using System.Linq;
 using System.Reflection;
 
-namespace Prueba_1
+namespace MSTest_OnBodingExamples
 {
     [TestClass]
     [TestCategory("LoadExcelData")]

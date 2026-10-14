@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Xml.Linq;
 using System.Xml.Serialization;
 
-namespace Prueba_1.Models
+namespace MSTest_OnBodingExamples.Models
 {
     [Serializable()]
     [XmlRoot(ElementName = "Order")]
