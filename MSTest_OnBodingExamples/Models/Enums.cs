@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.Serialization;
 
-namespace Prueba_1.Enums
+namespace MSTest_OnBodingExamples.Enums
 {
     public enum DocumentTypeEnum
     {

@@ -1,10 +1,10 @@
 ﻿//using Application.DTO.CustomersManagement;
-using Prueba_1.Enums;
+using MSTest_OnBodingExamples.Enums;
 using AutoFixture;
 using System;
 using System.Collections.Generic;
 
-namespace Prueba_1.Models
+namespace MSTest_OnBodingExamples.Models
 {
 	public class TestDataDTO
 	{

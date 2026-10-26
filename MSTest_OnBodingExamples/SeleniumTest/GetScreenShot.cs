@@ -25,11 +25,6 @@ public class GetScreeShot{
 
         Thread.Sleep(1000);
         string filePath = @"D:\Logs\Imagen1.png";
-        try{
-            new ScreenShot().TakeScrennShot(driver,filePath);
-        }catch(Exception e){
-            Console.WriteLine(e.InnerException);
-        }
 
         Assert.IsTrue(File.Exists(filePath));
     }
@@ -43,11 +38,6 @@ public class GetScreeShot{
 
         Thread.Sleep(1000);
         string filePath = @"D:\Logs\Imagen3.png";
-        try{
-            new ScreenShot().TakeScrennShot(driver,filePath);
-        }catch(Exception e){
-            Console.WriteLine(e.InnerException);
-        }
 
         Assert.IsTrue(File.Exists(filePath));
     }

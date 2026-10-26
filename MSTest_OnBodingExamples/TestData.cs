@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.IO;
 using System;
 using NPOI.XSSF.UserModel;
-using Prueba_1.Models;
+using MSTest_OnBodingExamples.Models;
 using CrossCutting.Mappers;
 using System.Xml.Linq;
-using Prueba_1.Enums;
+using MSTest_OnBodingExamples.Enums;
 using System.Linq;
 using System.Reflection;
 
-namespace Prueba_1
+namespace MSTest_OnBodingExamples
 {
     [TestClass]
     [TestCategory("LoadExcelData")]
@@ -22,7 +22,7 @@ namespace Prueba_1
         public void TestLoadData()
         {
             Models.City data = ReadExcel("Resources/TestData.xlsx");
-            Assert.AreEqual(data.Name, "San Sebastian de los Reyes");
+            Assert.AreEqual("San Sebastian de los Reyes", data.Name);
         }
 
 
@@ -48,7 +48,7 @@ namespace Prueba_1
             XDocument doc = XDocument.Parse(data[0].Request);
             IEnumerable<InputOrder> result = from c in doc.Descendants("Order")
                                                   select new InputOrder(c);
-            Assert.AreEqual(result.ToList()[0].OrderId, "86640");
+            Assert.AreEqual("86640", result.ToList()[0].OrderId);
         }
 
 

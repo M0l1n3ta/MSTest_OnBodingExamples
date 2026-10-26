@@ -5,7 +5,7 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
-using Prueba_1.Models;
+using MSTest_OnBodingExamples.Models;
 
 
 namespace MsTestExamples
