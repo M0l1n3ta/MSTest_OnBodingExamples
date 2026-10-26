@@ -83,6 +83,7 @@ public class SeleniumHtmlReportTests
         var menuOptions = driver.FindElements(By.CssSelector("ul.oxd-main-menu li"));
         var option = menuOptions.FirstOrDefault(m => m.Text.Equals("My Info", StringComparison.OrdinalIgnoreCase));
         option?.Click();
+        waitSpinnerToDisappear();
 
         wait.Until(d => d.FindElement(By.CssSelector("div.orangehrm-edit-employee-content")).Displayed);
         report.SetStepStatusPass("Step 2 - Navigate to Menu", true);
@@ -119,14 +120,16 @@ public class SeleniumHtmlReportTests
             driver.FindElement(By.Name("username")).SendKeys("Admin");
             driver.FindElement(By.Name("password")).SendKeys("admin123");
             driver.FindElement(By.CssSelector("button[type='submit']")).Click();
-            wait.Until(d => d.FindElement(By.CssSelector("img.oxd-userdropdown-img")).Displayed);
+           
             loggedIn = true;
         }
+        waitSpinnerToDisappear();
+        wait.Until(d => d.FindElement(By.CssSelector("img.oxd-userdropdown-img")).Displayed);
 
         report.SetStepStatusPass("Step 1 - Login to Application", true);
     }   
 
-    public void waitSpinnerToDisappear()
+    private  void waitSpinnerToDisappear()
     {
         // Locator for the spinner element (adjust selector to match your page)
         var spinner_locator = By.CssSelector("oxd-form-loader");
