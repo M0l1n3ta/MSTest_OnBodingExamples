@@ -22,7 +22,7 @@ namespace MSTest_OnBodingExamples
         public void TestLoadData()
         {
             Models.City data = ReadExcel("Resources/TestData.xlsx");
-            Assert.AreEqual(data.Name, "San Sebastian de los Reyes");
+            Assert.AreEqual("San Sebastian de los Reyes", data.Name);
         }
 
 
@@ -48,7 +48,7 @@ namespace MSTest_OnBodingExamples
             XDocument doc = XDocument.Parse(data[0].Request);
             IEnumerable<InputOrder> result = from c in doc.Descendants("Order")
                                                   select new InputOrder(c);
-            Assert.AreEqual(result.ToList()[0].OrderId, "86640");
+            Assert.AreEqual("86640", result.ToList()[0].OrderId);
         }
 
 

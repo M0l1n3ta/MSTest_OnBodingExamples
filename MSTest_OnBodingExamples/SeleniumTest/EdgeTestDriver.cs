@@ -18,6 +18,7 @@ namespace SeleniumTest
             options.AddArguments("start-maximized");
             options.AddArguments("--ignore-certificate-errors");
             driver = new EdgeDriver(options);
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
             driver.Navigate().GoToUrl("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
             
 
