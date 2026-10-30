@@ -44,8 +44,8 @@ public class SeleniumHtmlReportTests
     [DataRow("EMP1007")]
     public void CheckEmployeeID(string expectedEmployeeID)
     { 
-
-        DoLogin("Check Employee ID");
+        report.CreateTest("Check Employee ID");
+        DoLogin();
         
         var menuOptions = driver.FindElements(By.CssSelector("ul.oxd-main-menu li"));
         var option = menuOptions.FirstOrDefault(m => m.Text.Equals("My Info", StringComparison.OrdinalIgnoreCase));
@@ -77,8 +77,8 @@ public class SeleniumHtmlReportTests
     [DataRow("Hugo")]
     public void checkEmployeeName(String expectedName)
     { 
-        
-        DoLogin("Check Employee Name");
+        report.CreateTest("Check Employee Name");
+        DoLogin();
         
         var menuOptions = driver.FindElements(By.CssSelector("ul.oxd-main-menu li"));
         var option = menuOptions.FirstOrDefault(m => m.Text.Equals("My Info", StringComparison.OrdinalIgnoreCase));
@@ -114,7 +114,7 @@ public class SeleniumHtmlReportTests
 
     private  void DoLogin(string testName = "Login to Application")
     {
-        report.CreateTest(testName);
+        
         if(!loggedIn)
         {
             driver.FindElement(By.Name("username")).SendKeys("Admin");
